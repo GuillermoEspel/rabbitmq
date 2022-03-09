@@ -9,6 +9,7 @@
 Una cola de mensajes es una forma de comunicación asíncrona entre servicios. Los mensajes se almacenan en la cola hasta que son procesados y se eliminan.
 Cada mensaje debe procesarse una sola vez, por un solo consumidor.
 ![Alt text](docs/workflow-rabbitmq-768x106.png)
+
 Existen tres actores principales:
 
 - Una cola donde se almacenan los mensajes.
