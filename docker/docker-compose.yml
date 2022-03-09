@@ -1,0 +1,22 @@
+version: "3"
+services:
+  rabbitmq:
+    container_name: rabbitmq
+    image: "rabbitmq:3.7-management-alpine"
+    restart: always
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      AMQP_URL: "amqp://rabbitmq?connection_attempts=5&retry_delay=5"
+      RABBITMQ_DEFAULT_USER: rabbitmquser
+      RABBITMQ_DEFAULT_PASS: rabbitmqpassword
+    networks:
+      - local
+    volumes:
+      - "rabbit-db:/var/lib/rabbitmq"
+networks:
+  local:
+    driver: bridge
+volumes:
+  rabbit-db:

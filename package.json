@@ -1,0 +1,15 @@
+{
+  "name": "rabbitmq-application",
+  "version": "1.0.0",
+  "description": "RabbitMQ Application Testing",
+  "author": "Guillermo Espel",
+  "scripts": {
+    "up-docker": "cd docker && docker-compose up -d",
+    "down-docker": "cd docker && docker-compose down"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.8.0",
+    "dotenv": "^16.0.0"
+  }
+}
